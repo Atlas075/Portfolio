@@ -6,6 +6,7 @@
     font-family: 'Acme', sans-serif;
 }
 
+/**/
 header
 {
     background-image: url(/assets/images/hero.jpg);
@@ -63,6 +64,33 @@ header .nav-links
     margin-left: 15%;
 }
 
+.menu-button
+{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.menu-button .bar
+{
+    height: 3px;
+    width: 100%;
+    background-color: green;
+    border-radius: 10px;
+
+}
+
+
+/*header section edns*/
+
+/*hero section starts*/
 
 #hero
 {
@@ -70,8 +98,16 @@ header .nav-links
     height: 50vh;
     background: linear-gradient(rgba(0, 0, 0, 0.432), rgba(0, 0, 0, 0.438)), url(/assets/hero.jpg) no-repeat center / cover;
     color: white;
+}
 
+#hero h2
+{
+font-size: 40px;
+}
 
+#hero p
+{
+    font-size: 25px;
 }
 #hero a
 {
@@ -116,6 +152,10 @@ header .nav-links
     border-radius: 5px;
 }
 
+/*Hero section ends*/
+
+/*body section starts*/
+
 body
 {   
     color: white;
@@ -127,120 +167,6 @@ body h2
 {    
     font-size: 25px
 }
-
-
-.menu-button
-{
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 25px;
-    align-items: center;
-    padding-top: 5px;
-
-
-}
-
-.menu-button .bar
-{
-    height: 3px;
-    width: 100%;
-    background-color: green;
-    border-radius: 10px;
-
-}
-
-
-
-@media(max-width: 500px)
-{
-    section
-    {
-        text-align: center;
-    }
-    .menu-button
-    {
-        display: flex;
-    }
-
-    .navbar h1
-    {
-        color: green;
-
-    }
-    .navbar ul
-    {
-        display: none;
-        width: 100%;
-    }
-
-    .navbar
-    {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-link ul 
-    {
-        
-        flex-direction: column;
-        width: 100%;
-    }
-    .nav-links li
-    {
-        
-        text-align: center;
-    }
-
-    .nav-links li a 
-    {
-        padding: 10px;
-    }
-
-    .nav-links.active
-    {
-        display: flex;
-    }
-
-    body h2
-    {
-        color: green;
-    }
-
-    #contact-me
-    {
-        flex-direction: column;
-        display: flex;
-        justify-content: space-between;
-        padding-right: 10%;
-        height: 400px
-    }
-
-
-    #my-work
-    {
-        flex-direction: column;
-    }
-}
-
-
-/* body section */
-
-
-/* .primary-color
-{
-    background-color: #b9b9b9;
-}
-
-.secondary-color
-{
-    background-color: green;
-} */
-
 
 section
 {
@@ -257,6 +183,7 @@ section
     flex-wrap: wrap;
     flex-direction: column;
     padding: 5%;
+    font-size: 20px;
 }
 .mee
 {
@@ -340,9 +267,9 @@ align-items: center;
     background-image: url(/assets/card-1.jpg);
 }
 
-.card
+.card a
 {
-
+    color: green;
 }
 
 .card-2
@@ -373,3 +300,81 @@ align-items: center;
     transition: all .5s ease;
 
 }
+
+/*body section ends*/
+
+/*mobiel section start*/
+
+@media(max-width: 500px)
+{
+    section
+    {
+        text-align: center;
+    }
+    .menu-button
+    {
+        display: flex;
+    }
+
+    .navbar h1
+    {
+        color: green;
+
+    }
+    .navbar ul
+    {
+
+        display: none;
+    }
+
+    .navbar
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    .nav-link ul 
+    {
+        
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-links li
+    {
+         text-align: center;
+    }
+
+    .nav-links li a 
+    {
+        padding: 10px;
+    }
+
+    .nav-links.active
+    {
+        display: flex;
+        margin: 5%;
+    }
+
+    body h2
+    {
+        color: green;
+    }
+
+    #contact-me
+    {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10%;
+        height: 400px
+    }
+
+
+    #my-work
+    {
+        flex-direction: column;
+    }
+}
+
+/*mobile section ends*/
