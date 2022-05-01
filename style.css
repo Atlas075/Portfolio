@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
 }
 
 header
@@ -18,8 +19,10 @@ header
     background-repeat: no-repeat;
 
 }
-header h1
+
+.navbar h1
 {
+    padding-left: 20%;
     font-size: 50px;
 }
 
@@ -28,8 +31,25 @@ header h1
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: black;
+    padding-right: 5%;
+    height: 60px;
 
 }
+
+.navbar a
+{
+    color: green;
+    text-decoration: none;
+}
+.navbar a:hover
+{
+    text-decoration: underline;
+    border-radius: 5px;
+    color: rgb(0, 170, 0);
+    
+}
+
 header .nav-links
 {
     display: flex;
@@ -41,23 +61,42 @@ header .nav-links
     font-size: 25px;
     padding: 10px;
     margin-left: 15%;
-    
 }
 
-header li
-{
-    color: green;
-}
 
 #hero
 {
     width: 100%;
     height: 50vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.432), rgba(0, 0, 0, 0.438)), url(/assets/images/hero.jpg) no-repeat center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.432), rgba(0, 0, 0, 0.438)), url(/assets/hero.jpg) no-repeat center / cover;
     color: white;
+
+
+}
+#hero a
+{
+    font-size: 150%;
+    background: black;
+    color: green;
+    border: green solid;
+    text-decoration: none;
+}
+
+#hero a:hover
+{
+    background: green;
+    color: black;
+    transform: scaleX(1.3);
+    transition: all (1);
 
 }
 
+.info
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .container
 {
     width: 90%;
@@ -66,7 +105,9 @@ header li
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    line-height: 2;
 }
 
 .container .info a
@@ -76,9 +117,17 @@ header li
 }
 
 body
-{
+{   
+    color: white;
     background-color: black;
 }
+
+
+body h2
+{    
+    font-size: 25px
+}
+
 
 .menu-button
 {
@@ -117,6 +166,12 @@ body
     {
         display: flex;
     }
+
+    .navbar h1
+    {
+        color: green;
+
+    }
     .navbar ul
     {
         display: none;
@@ -151,6 +206,11 @@ body
         display: flex;
     }
 
+    body h2
+    {
+        color: green;
+    }
+
     #contact-me
     {
         flex-direction: column;
@@ -158,6 +218,12 @@ body
         justify-content: space-between;
         padding-right: 10%;
         height: 400px
+    }
+
+
+    #my-work
+    {
+        flex-direction: column;
     }
 }
 
@@ -175,16 +241,6 @@ body
     background-color: green;
 } */
 
-body
-{
-    color: white;
-}
-
-
-body h2
-{
-    font-size: 25px
-}
 
 section
 {
@@ -196,20 +252,23 @@ section
 {
     
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding-right: 15%;
     flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5%;
 }
 .mee
 {
-    width: 20%;
-    height:  20%;
+    width: 40vw;
+    height:  40%;
 
 }
 
-#my-work h2
+#my-work
 {
+    display: flex;
+    justify-content: space-around;
 align-items: center;
 }
 
@@ -223,21 +282,19 @@ align-items: center;
     padding: 5%;
 }
 
-.icon
+#contact-me a
 {
-    width: 20px;
+    color: green;
 }
 
-
-
-#contact-me p
-{
-    
-}
 
 #my-resume
 {
-    height: 400px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
 }
 
 .container-card
@@ -280,27 +337,32 @@ align-items: center;
 
 .card-1
 {
-    background-image: url(/assets/images/card-1.jpg);
+    background-image: url(/assets/card-1.jpg);
+}
+
+.card
+{
+
 }
 
 .card-2
 {
-    background-image: url(/assets/images/card-2.jpg);
+    background-image: url(/assets/card-2.jpg);
 }
 
 .card-3
 {
-    background-image: url(/assets/images/card-3.jpg);
+    background-image: url(/assets/card-3.jpg);
 }
 
 .card-4
 {
-    background-image: url(/assets/images/card-4.jpg);
+    background-image: url(/assets/card-4.jpg);
 }
 
 .card-5
 {
-    background-image: url(/assets/images/card-5.jpg);
+    background-image: url(/assets/card-5.jpg);
 }
 
 .card:hover
